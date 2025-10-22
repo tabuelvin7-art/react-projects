@@ -6,13 +6,13 @@ import { CheckoutPage } from "./pages/CheckoutPage.jsx";
 import { OrderPage } from "./pages/OrdersPage.jsx";
 import { TrackingPage } from "./pages/TrackingPage.jsx";
 import "./App.css";
-import { use } from "react";
+
 
 function App() {
 const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    axios.get("/api/cart-items").then((response) => {
+    axios.get('/api/cart-items?expand=product').then((response) => {
       setCart(response.data);
     });
     },[]);
