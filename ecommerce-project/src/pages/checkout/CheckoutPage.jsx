@@ -4,7 +4,7 @@ import { OrderSummary } from "./OrderSummary";
 import { PaymentSummary } from "./paymentSummary";
 import "./checkout-header.css";
 import "./CheckoutPage.css";
-import { OrderPage } from "../orders/OrdersPage";
+
 
 export function CheckoutPage({ cart, loadCart }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
