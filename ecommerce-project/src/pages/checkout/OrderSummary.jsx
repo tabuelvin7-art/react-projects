@@ -15,11 +15,7 @@ export function OrderSummary({ cart, deliveryOptions, loadCart  }) {
             }
           );
 
-          const deleteCartItem = async () => {
-            await axios.delete(`/api/cart-items/${cartItem.productId}`);
-            await loadCart();
-          }
-          const updateCartItem = async () => {
+           const updateCartItem = async () => {
             await axios.put(`/api/cart-items/${cartItem.productId}`, {
               quantity: cartItem.quantity
                
@@ -37,12 +33,10 @@ export function OrderSummary({ cart, deliveryOptions, loadCart  }) {
               </div>
 
               <div className="cart-item-details-grid">
-                <img className="product-image" src={cartItem.product.image} />
-
-              <CartItemDetails
+                <CartItemDetails
                 cartItem={cartItem}
+                loadCart={loadCart}
                 updateCartItem={updateCartItem}
-                deleteCartItem={deleteCartItem}
               />
 
                <DeliveryOptions deliveryOptions={deliveryOptions} cartItem={cartItem} loadCart={loadCart} />
