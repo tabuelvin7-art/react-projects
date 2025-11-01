@@ -35,12 +35,15 @@
 }
 
 .header .header-link:hover {
-  border: 1px solid white;
+  border: 1px white;
 }
 
 .header .logo {
-  height: 26px;
+ 
+  height: 100px;
   margin-top: 1px;
+  width: 100px;
+  
 }
 
 .header .mobile-logo {
